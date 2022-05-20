@@ -7,44 +7,53 @@ import {
   FooterLinkItems,
   FooterLinkTitle,
   FooterLink,
+  SocialMedia,
+  SocialMediaWrapper,
+  SocialMediaLogo,
+  SocialMediaIcons,
+  SocialMediaIconLink,
 } from './FooterElements'
+import { FaFacebook, FaEnvelope } from 'react-icons/fa'
 
 const Footer = () => {
   return (
     <FooterContainer>
+      <SocialMediaLogo to = '/signin'>
+        Logo
+      </SocialMediaLogo>
       <FooterWrapper>
-        <FooterLinksContainer>
+        <FooterLinksContainer>          
           <FooterLinksWrapper>
             <FooterLinkItems>
-              <FooterLinkTitle>About us</FooterLinkTitle>
-                <FooterLink to = '/signin'>How it works</FooterLink>
-                <FooterLink to = '/signin'>Testimonials</FooterLink>
-                <FooterLink to = '/signin'>Careers</FooterLink>
-                <FooterLink to = '/signin'>Investors</FooterLink>
-                <FooterLink to = '/signin'>Terms of Service</FooterLink>
-              <FooterLinkTitle>About us</FooterLinkTitle>
-                <FooterLink to = '/signin'>How it works</FooterLink>
-                <FooterLink to = '/signin'>Testimonials</FooterLink>
-                <FooterLink to = '/signin'>Careers</FooterLink>
-                <FooterLink to = '/signin'>Investors</FooterLink>
-                <FooterLink to = '/signin'>Terms of Service</FooterLink>
+              <FooterLinkTitle>Tekstiä</FooterLinkTitle>
+                <FooterLink to = '/signin'>Tekstiä</FooterLink>
+                <FooterLink to = '/signin'>Tekstiä</FooterLink>
+                <FooterLink to = '/signin'>Tekstiä</FooterLink>
+                <FooterLink to = '/signin'>Tekstiä</FooterLink>
+                <FooterLink to = '/signin'>Tekstiä</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
-              <FooterLinkTitle>About us</FooterLinkTitle>
-                <FooterLink to = '/signin'>How it works</FooterLink>
-                <FooterLink to = '/signin'>Testimonials</FooterLink>
-                <FooterLink to = '/signin'>Careers</FooterLink>
-                <FooterLink to = '/signin'>Investors</FooterLink>
-                <FooterLink to = '/signin'>Terms of Service</FooterLink>
-              <FooterLinkTitle>About us</FooterLinkTitle>
-                <FooterLink to = '/signin'>How it works</FooterLink>
-                <FooterLink to = '/signin'>Testimonials</FooterLink>
-                <FooterLink to = '/signin'>Careers</FooterLink>
-                <FooterLink to = '/signin'>Investors</FooterLink>
-                <FooterLink to = '/signin'>Terms of Service</FooterLink>
+              <FooterLinkTitle>Tekstiä</FooterLinkTitle>
+                <FooterLink to = '/signin'>Tekstiä</FooterLink>
+                <FooterLink to = '/signin'>Tekstiä</FooterLink>
+                <FooterLink to = '/signin'>Tekstiä</FooterLink>
+                <FooterLink to = '/signin'>Tekstiä</FooterLink>
+                <FooterLink to = '/signin'>Tekstiä</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
+        <SocialMedia>
+          <SocialMediaWrapper>           
+            <SocialMediaIcons>
+              <SocialMediaIconLink href = '//www.facebook.com/irishpubstmichael' target = '_blank' aria-label = 'Facebook'>
+                <FaFacebook />
+              </SocialMediaIconLink>
+              <SocialMediaIconLink href = 'mailto:stmichael@stmichael.fi' target = '_blank' aria-label = 'Mail'>
+                <FaEnvelope />
+              </SocialMediaIconLink>
+            </SocialMediaIcons>
+          </SocialMediaWrapper>
+        </SocialMedia>
       </FooterWrapper>
     </FooterContainer>
   )

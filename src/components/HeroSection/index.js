@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Video from '../../video/guinness.mp4'
 import Logo from '../../images/St michael logo.png'
-import { Button } from '../ButtonElement'
 import { 
   HeroContainer,
   HeroBg, 
@@ -9,17 +8,24 @@ import {
   HeroContent,
   HeroLogo,
   HeroH1,
+  HeroH3,
   HeroP, 
-  HeroBtnWrapper,
-  ArrowForward,
-  ArrowRight,
 } from './HeroElements'
 
-const HeroSection = () => {
-  const [hover, setHover] = useState(false);
-  
-  const onHover = () => setHover(hovering => !hovering);
+const rowStyles = {
+  alignItems: 'center',
+  color: 'gold',
+  fontSize: '20px',
+  textAlign: 'left',
+  width: 'auto',
+}
 
+const tableHeaderStyles = {
+  width: '20%',
+}
+
+const HeroSection = () => {
+  
   return (
     <HeroContainer>
       <HeroBg>
@@ -31,25 +37,23 @@ const HeroSection = () => {
         <HeroP>
           Hallituskatu 13-17 90100 Oulu
         </HeroP>
-        <HeroP>
-          Avoinna:
-        </HeroP>
-        <HeroP>
-          Ma-To 12-02
-        </HeroP>
-        <HeroP>
-          Pe-Lo 12-03
-        </HeroP>
-        <HeroP>
-          Su 12-02
-        </HeroP>
-        <HeroBtnWrapper>
-          <Button to = 'signup' 
-          onMouseEnter = {onHover} onMouseLeave = {onHover} 
-          primary = 'true' dark = 'true' >
-            Get Started! {hover ? <ArrowForward /> : <ArrowRight />} 
-          </Button>
-        </HeroBtnWrapper>
+        <HeroH3>Avoinna:</HeroH3>
+        <>
+          <table style = {tableHeaderStyles}>
+            <tr style={rowStyles}>
+              <th>Ma-To</th>
+              <th>12 - 02</th>
+            </tr>
+            <tr style={rowStyles}>
+              <th>Pe-La</th>
+              <th>12 - 03</th>
+            </tr>
+            <tr style={rowStyles}>
+              <th>Su</th>
+              <th>12 - 02</th>
+            </tr>
+          </table>
+        </>
       </HeroContent>
     </HeroContainer>
   )

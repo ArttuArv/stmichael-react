@@ -80,14 +80,31 @@ export const HeroH1 = styled.h1`
   font-size: 48px;
   text-align: center;
   text-shadow: 5px 10px 10px #000;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 
-  @media screen and (max-width: 768px) {
-    font-size: 40px;
+  @media screen and (max-width: 873px) {
+    font-size: 42px;
   }
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
+  }
+`;
+
+export const HeroH3 = styled.h3`
+  color: gold;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 5px 10px 10px #000;
+  margin-bottom: 24px;
+  margin-top: 16px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
   }
 `;
 

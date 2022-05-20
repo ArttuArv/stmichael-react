@@ -3,23 +3,29 @@ import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 
 export const InfoContainer = styled.div`
   color: #fff;
+  border-top: 3px solid gold;
+  border-bottom: 3px solid gold;
   background: ${({lightBg}) => (lightBg ? '#fffded' : '#010606')};
 
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
+  // @media screen and (max-width: 768px) {
+  //   padding: 100px 0;
+  // }
 `;
 
 export const InfoWrapper = styled.div`
-  display: grid;
+  display: grid;  
   z-index: 1;
-  height: 860px;
+  height: 550px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+
+  @media screen and (max-width: 990px) {
+    height: 800px;
+  }
 `;
 
 export const InfoRow = styled.div`

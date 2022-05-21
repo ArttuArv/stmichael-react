@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FaBars } from 'react-icons/fa';
-import Logo from '../../images/St michael logo.png'
+import Logo from '../../assets/images/St michael logo.png'
 import { 
   Nav, 
   NavbarContainer, 

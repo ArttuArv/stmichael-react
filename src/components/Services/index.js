@@ -1,7 +1,7 @@
 import React from 'react'
-import Icon1 from '../../images/beer.png'
-import Icon2 from '../../images/beer.png'
-import Icon3 from '../../images/beer.png'
+import Icon1 from '../../assets/images/beer.png'
+import Icon2 from '../../assets/images/beer.png'
+import Icon3 from '../../assets/images/beer.png'
 import { 
   ServicesContainer,  
   ServicesWrapper, 

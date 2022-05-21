@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
-  border-top: 6px solid gold;
-  border-bottom: 6px solid gold;
-  background-color: #003314;
+  border-top: 3px solid #D4A24E;
+  border-bottom: 6px solid #D4A24E;
+  background-color: #13371d;
 `;
 
 export const FooterWrapper = styled.div`
@@ -109,6 +109,11 @@ export const SocialMediaIcons = styled.div`
 `;
 
 export const SocialMediaIconLink = styled.a`
-  color: gold;
+  color: #D4A24E;
   font-size: 24px;
+
+  &:hover {
+    transform: scale(1.5);
+    transition: 0.2s ease-in-out;
+  }
 `;

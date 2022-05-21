@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaBars } from 'react-icons/fa';
 import Logo from '../../images/St michael logo.png'
 import { 
@@ -15,9 +15,23 @@ import {
 } from './NavbarElements'
 
 const Navbar  = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <Nav>
+      <Nav scrollNav = {scrollNav}>
         <NavbarContainer>
           <MobileIcon >
             <FaBars onClick = {toggle}/>

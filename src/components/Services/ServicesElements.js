@@ -46,7 +46,7 @@ export const ServicesCard = styled.div`
   border-radius: 10px;
   max-height: 500px;
   padding: 30px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease-in-out;
 
   &:hover {
@@ -73,11 +73,11 @@ export const ServicesH1 = styled.h1`
 `;
 
 export const ServicesH2 = styled.h2`
-  font-size: 1rem;
+  font-size: 2rem;
   margin-bottom: 10px;
 `;
 
 export const ServicesP = styled.p`
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
 `;

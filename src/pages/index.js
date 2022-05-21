@@ -13,7 +13,6 @@ const Home = () => {
 
   const toggle = () => {   
     setIsOpen( open => !open );
-    console.log("State changed", isOpen);
   }
 
   return (

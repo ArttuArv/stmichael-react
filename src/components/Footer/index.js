@@ -13,7 +13,7 @@ import {
   SocialMediaIcons,
   SocialMediaIconLink,
 } from './FooterElements'
-import { FaFacebook, FaEnvelope } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -47,6 +47,9 @@ const Footer = () => {
             <SocialMediaIcons>
               <SocialMediaIconLink href = '//www.facebook.com/irishpubstmichael' target = '_blank' aria-label = 'Facebook'>
                 <FaFacebook />
+              </SocialMediaIconLink>
+              <SocialMediaIconLink href = '//www.instagram.com/st.michael_oulu' target = '_blank' aria-label = 'Facebook'>
+                <FaInstagram />
               </SocialMediaIconLink>
               <SocialMediaIconLink href = 'mailto:stmichael@stmichael.fi' target = '_blank' aria-label = 'Mail'>
                 <FaEnvelope />

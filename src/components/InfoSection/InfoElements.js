@@ -3,8 +3,8 @@ import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 
 export const InfoContainer = styled.div`
   color: #fff;
-  border-top: 3px solid #D4A24E;
-  border-bottom: 3px solid #D4A24E;
+  border-top: 1px solid #D4A24E;
+  border-bottom: 1px solid #D4A24E;
   background: ${({lightBg}) => (lightBg ? '#fffded' : '#13371d')};
 
   // @media screen and (max-width: 768px) {

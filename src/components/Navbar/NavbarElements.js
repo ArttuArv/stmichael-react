@@ -11,30 +11,33 @@ export const Nav = styled.nav`
   //background: #123d0d;
   background: ${({ scrollNav }) => ( scrollNav 
     ? '#13371d' 
-    : 'transparent' )};
-  border-bottom: ${({ scrollNav }) => ( scrollNav
-    ? '3px solid #D4A24E'
-    : 'none' )};
-  
-  height: 80px;
-  margin-top: -80px; 
+    : 'transparent' )}; 
+  border-bottom: ${({ scrollNav }) => ( scrollNav 
+    ? '3px solid #D4A24E' 
+    : 'none' )}; 
+  height: 60px;
+  margin-top: -60px; 
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: 0.4s all ease;
 
   @media screen and (max-width: 960px) {
-    color: #fff;
-    transition: 0.8s all ease;
+    transition: 0.4s all ease;
   }
+
+  @media screen and (max-width: 768px) {
+    background: transparent;
+    border-bottom: none;
 `;
 
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 60px;
   z-index: 1;
   widht: 100%;
   padding: 0 24px;
@@ -42,7 +45,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkRouter)`    // Navbar Logo
-  color: #ffff00;
+  color: #D4A24E;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 3.5rem;
@@ -63,14 +66,36 @@ export const MobileIcon = styled.div`       // Menu-ikoni oikea yläreuna
     display: none;
 
   @media screen and (max-width: 768px) {
-    display: block;
+    display: flex;
     position: absolute;
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #d4af37;
+    color: gold;
+  }
+
+  @media screen and (max-width: 390px) {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-60%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: gold;
+  }
+
+  @media screen and (max-width: 375px) {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-60%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: gold;
   }
 `;
 
@@ -91,18 +116,19 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkScroll)`
-  //display: flex;
+  // display: flex;
   color: #D4A24E;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
-  height: 100%;
+
+  // height: 100%;
   cursor: pointer;  
 
   &:hover {
     color: #CDC262;
     font-size: 2.1rem;
-    border-bottom: 3px solid #01BF71;
+    border-bottom: 3px solid #D4A24E;
     transition: 0.6 ease-in-out;    
   }
 

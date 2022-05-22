@@ -7,7 +7,7 @@ export const HeroContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  height: 800px;
+  height: 876px;
   position: relative;
   z-index: 1;
 
@@ -27,6 +27,11 @@ export const HeroContainer = styled.div`
         rgba(0, 0, 0, 0.2) 0%, 
         transparent 100%);
     z-index: 2;
+  }
+
+  @media screen and (max-height: 667px) {
+    height: 630px;
+  }
 `;
 
 export const HeroBg = styled.div`
@@ -64,15 +69,19 @@ export const HeroLogo = styled.img`
   margin-bottom: 48px; 
 
   @media screen and (max-width: 768px) {
+    margin-bottom: 24px;
     height: 150px;
   }
 
   @media screen and (max-width: 480px) {
+    margin-bottom: 24px;
     height: 100px;
   }
 
   @media screen and (max-width: 375px) {
+    margin-bottom: 24px;
     height: 80px;
+  }
 `;
 
 export const HeroH1 = styled.h1`
@@ -93,6 +102,10 @@ export const HeroH1 = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
+
+  @media screen and (max-width: 375px) {
+    font-size: 38px;
+  }
 `;
 
 export const HeroH3 = styled.h3`
@@ -108,7 +121,7 @@ export const HeroH3 = styled.h3`
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 20px;
+    font-size: 24px;
   }
 `;
 
@@ -124,7 +137,7 @@ export const HeroP = styled.p`
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 20px;
+    font-size: 22px;
   }  
 `;
 
@@ -140,9 +153,12 @@ export const HeroTable = styled.table`
   text-shadow: 3px 5px 3px #000;
 `;
 
+export const HeroTableBody = styled.tbody`
+`;
+
 export const HeroTableRow = styled.tr`
-  border-bottom: 3px solid #D4A24E;
-  box-shadow: 3px 5px 3px #000;
+  // border-bottom: 3px solid #D4A24E;
+  // box-shadow: 3px 5px 3px #000;
 `;
 
 export const HeroTableHead = styled.th`

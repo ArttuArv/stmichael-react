@@ -26,7 +26,7 @@ export const SidebarContainer = styled.aside`
 `;
 
 export const CloseIcon = styled(FaTimes)`     // Sulkemisrasti
-  color: #ffd700;
+  color: #D4A24E;
 `;
 
 export const Icon = styled.div`
@@ -46,11 +46,11 @@ export const SidebarWrapper = styled.div`
 export const SidebarMenu = styled.ul`           // Menun lista-asettelu
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 100px);
+  grid-template-rows: repeat(6, 150px);
   text-align: center;
 
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(6, 60px);
+    grid-template-rows: repeat(4, 100px);
   }
 `;
 
@@ -58,12 +58,12 @@ export const SidebarLink = styled(LinkScroll)`    // Linkkitekstit
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   text-decoration: none;
   list-style: none;
   transition: 0.2 ease-in-out;
   text-decoration: none;
-  color: #d4af37;
+  color: #D4A24E;
   cursor: pointer;
 
   &:hover {

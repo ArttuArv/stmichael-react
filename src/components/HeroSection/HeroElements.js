@@ -64,39 +64,52 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroLogo = styled.img`
-  height: 200px;
-  width: auto;
-  margin-bottom: 48px; 
+  height: 100%;
+  width: 100%;
+  margin-bottom: 48px;
 
-  @media screen and (max-width: 768px) {
-    margin-bottom: 24px;
-    height: 150px;
-  }
 
-  @media screen and (max-width: 480px) {
-    margin-bottom: 24px;
-    height: 100px;
-  }
+  // @media screen and (max-width: 768px) {
+  //   margin-bottom: 24px;
+  //   height: 150px;
+  // }
 
-  @media screen and (max-width: 375px) {
-    margin-bottom: 24px;
-    height: 80px;
-  }
+  // @media screen and (max-width: 480px) {
+  //   margin-bottom: 24px;
+  //   height: 100px;
+  // }
+
+  // @media screen and (max-width: 375px) {
+  //   margin-bottom: 24px;
+  //   height: 80px;
+  // }
 `;
 
 export const HeroH1 = styled.h1`
-  color: #D4A24E;
-  font-size: 68px;
+  color: #F5BD30;
+  font-size: 60px;
   text-align: center;
   text-shadow: 3px 5px 3px #000;
   margin-bottom: 8px;
 
+  @media screen and (max-width: 1069px) {
+    font-size: 55px;
+  }
+
+  @media screen and (max-width: 983px) {
+    font-size: 50px;
+  }
+
+  @media screen and (max-width: 899px) {
+    font-size: 46px;
+  }
+
   @media screen and (max-width: 873px) {
-    font-size: 68px;
+    font-size: 44px;
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   @media screen and (max-width: 480px) {
@@ -104,12 +117,12 @@ export const HeroH1 = styled.h1`
   }
 
   @media screen and (max-width: 375px) {
-    font-size: 38px;
+    font-size: 32px;
   }
 `;
 
 export const HeroH3 = styled.h3`
-  color: #D4A24E;
+  color: #F5BD30;
   font-size: 42px;
   text-align: center;
   text-shadow: 3px 5px 3px #000;
@@ -126,8 +139,8 @@ export const HeroH3 = styled.h3`
 `;
 
 export const HeroP = styled.p`
-  color: #D4A24E;
-  font-size: 42px;
+  color: #F5BD30;
+  font-size: 38px;
   text-align: center;
   max-width: 600px;
   text-shadow: 3px 5px 3px #000;
@@ -157,13 +170,13 @@ export const HeroTableBody = styled.tbody`
 `;
 
 export const HeroTableRow = styled.tr`
-  // border-bottom: 3px solid #D4A24E;
+  // border-bottom: 3px solid #F5BD30;
   // box-shadow: 3px 5px 3px #000;
 `;
 
 export const HeroTableHead = styled.th`
   padding: 4px;
-  color: #D4A24E;
+  color: #F5BD30;
   font-size: 30px;
   text-align: left;
   text-shadow: 3px 5px 3px #000;

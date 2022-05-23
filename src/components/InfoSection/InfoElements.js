@@ -3,9 +3,9 @@ import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 
 export const InfoContainer = styled.div`
   color: #fff;
-  border-top: 1px solid #D4A24E;
-  border-bottom: 1px solid #D4A24E;
-  background: ${({lightBg}) => (lightBg ? '#fffded' : '#13371d')};
+  border-top: 1px solid #F5BD30;
+  border-bottom: 1px solid #F5BD30;
+  background: ${({lightBg}) => (lightBg ? '#fffded' : '#1F1A17')};
 
   // @media screen and (max-width: 768px) {
   //   padding: 100px 0;
@@ -15,7 +15,8 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
   display: grid;  
   z-index: 1;
-  height: 550px;
+  // height: 550px;
+  height: auto;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -24,7 +25,8 @@ export const InfoWrapper = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 990px) {
-    height: 800px;
+    // height: 800px;
+    height: auto;
   }
 `;
 
@@ -32,6 +34,7 @@ export const InfoRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
+  font-
   grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
   @media screen and (max-width: 990px) {
@@ -60,11 +63,11 @@ export const TextWrapper = styled.div`
 export const TopLine = styled.p`
   color: ${({ lightText }) => (lightText ? '#01BF71' : '#D4A24E')};
   font-size: 24px;
-  line-height: 16px;
+  line-height: auto;
   font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 4px;
   margin-top: 16px;
 `;
 
@@ -100,7 +103,7 @@ export const ImgWrap = styled.div`
 
 export const Img = styled.img`
   width: 100%;
-  margin: 0 0 10px 0;
+  margin: 15px 0;
   padding-right: 0;
 `;
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Video from '../../assets/video/guinness.mp4'
-import Logo from '../../assets/images/St michael logo shadow.png'
+import Logo from  '../../assets/images/Michael-logorigin.png'  //'../../assets/images/St michael logo shadow.png'
 import OpeningHours from './OpeningHours'
 import { 
   HeroContainer,

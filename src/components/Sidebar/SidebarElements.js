@@ -8,11 +8,11 @@ export const SidebarContainer = styled.aside`
   z-index: 999;
   width: 100%;
   height: 100%;
-  // background: #014421;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 27, 13, 0.9) 50%,
-    rgba(0, 27, 13, 0.5) 100%);
+  background: #1f1a17;
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(31, 26, 23, 0.9) 75%,
+  //   rgba(31, 26, 23, 0.5) 100%);
   display: grid;
   align-items: center;
   top: 0;
@@ -26,7 +26,12 @@ export const SidebarContainer = styled.aside`
 `;
 
 export const CloseIcon = styled(FaTimes)`     // Sulkemisrasti
-  color: #D4A24E;
+  color: #f5bd30;
+
+  :hover {
+    color: #C49726;
+    transition: 0.2 ease-in-out;
+  }
 `;
 
 export const Icon = styled.div`
@@ -63,11 +68,11 @@ export const SidebarLink = styled(LinkScroll)`    // Linkkitekstit
   list-style: none;
   transition: 0.2 ease-in-out;
   text-decoration: none;
-  color: #D4A24E;
+  color: #f5bd30;
   cursor: pointer;
 
   &:hover {
-    color: #01bf71;
+    color: #C49726;
     transition: 0.2 ease-in-out;
   }
 `;

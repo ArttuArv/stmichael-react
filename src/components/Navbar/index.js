@@ -38,13 +38,37 @@ const Navbar  = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to = 'news' >Ajankohtaista</NavLinks>
+              <NavLinks 
+                to = 'news' 
+                smooth = {true} 
+                duration = {500} 
+                spy = {true}
+                exact = 'true' 
+                offset = {-60}>
+                Ajankohtaista
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to = 'products' >Tuotteita</NavLinks>
+              <NavLinks 
+                to = 'products'
+                smooth = {true} 
+                duration = {500} 
+                spy = {true}
+                exact = 'true' 
+                offset = {-60}>
+                Tuotteita
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to = 'story' >Tarina</NavLinks>
+              <NavLinks 
+                to = 'story'  
+                smooth = {true} 
+                duration = {500} 
+                spy = {true}
+                exact = 'true' 
+                offset = {-60}>
+                Tarina
+              </NavLinks>
             </NavItem>    
           </NavMenu>
         </NavbarContainer>

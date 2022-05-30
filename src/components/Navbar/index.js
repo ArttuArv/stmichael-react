@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { FaBars } from 'react-icons/fa';
-import Logo from '../../assets/images/St michael logo.png'
+import Logo from '../../assets/images/michael-logo-nelio.png'
 import { 
   Nav, 
   NavbarContainer, 
-  NavLogo, 
   MobileIcon, 
   NavMenu, 
   NavItem, 
   NavLinks,
-  NavBtn,
-  NavBtnLink, 
   NavLogoImg,
 } from './NavbarElements'
 
@@ -29,45 +26,56 @@ const Navbar  = ({ toggle }) => {
     window.addEventListener('scroll', handleScroll);
   }, []);
 
+  const onTop = () => {
+    window.scrollTo( {
+      top: 0,
+      behavior: 'smooth',
+      duration: 500,
+      spy: true,
+      exact: true,
+    } );
+  }
+
   return (
     <>
-      <Nav scrollNav = {scrollNav}>
+      <Nav scrollNav = {scrollNav}>        
         <NavbarContainer>
+        <NavLogoImg scrollNav = {scrollNav} onClick = {onTop} src = {Logo} alt = {''}  />
           <MobileIcon >
             <FaBars onClick = {toggle}/>
           </MobileIcon>
           <NavMenu>
             <NavItem>
               <NavLinks 
-                to = 'news' 
+                to = '/' 
                 smooth = {true} 
                 duration = {500} 
                 spy = {true}
                 exact = 'true' 
-                offset = {-60}>
-                Ajankohtaista
+                offset = {-80}>
+                Etusivu
               </NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks 
-                to = 'products'
+                to = 'whisky'
                 smooth = {true} 
                 duration = {500} 
                 spy = {true}
                 exact = 'true' 
-                offset = {-60}>
-                Tuotteita
+                offset = {-80}>
+                Hanasta
               </NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks 
-                to = 'story'  
+                to = 'whisky'  
                 smooth = {true} 
                 duration = {500} 
                 spy = {true}
                 exact = 'true' 
-                offset = {-60}>
-                Tarina
+                offset = {-80}>
+                Viskit
               </NavLinks>
             </NavItem>    
           </NavMenu>

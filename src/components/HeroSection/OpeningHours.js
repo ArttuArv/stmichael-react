@@ -7,23 +7,32 @@ import {
   HeroTableHead, 
 } from './HeroElements'
 
+const openingHours = [
+  {
+    day: 'Ma-To',
+    hours: '12 - 02',
+  },
+  {
+    day: 'Pe-La',
+    hours: '12 - 03',
+  },
+  {
+    day: 'Su',
+    hours: '12 - 02',
+  },
+]
+
 const OpeningHours = () => {
   return (
     <HeroTableWrapper>
       <HeroTable>
         <HeroTableBody>
-          <HeroTableRow>
-            <HeroTableHead>Ma-To</HeroTableHead>
-            <HeroTableHead>12 - 02</HeroTableHead>
-          </HeroTableRow>
-          <HeroTableRow>
-            <HeroTableHead>Pe-La</HeroTableHead>
-            <HeroTableHead>12 - 03</HeroTableHead>
-          </HeroTableRow>
-          <HeroTableRow>
-            <HeroTableHead>Su</HeroTableHead>
-            <HeroTableHead>12 - 03</HeroTableHead>
-          </HeroTableRow>
+          {openingHours.map( (item) => (
+            <HeroTableRow key = {item.day}>
+              <HeroTableHead>{item.day}</HeroTableHead>
+              <HeroTableHead>{item.hours}</HeroTableHead>
+            </HeroTableRow>
+          ))}
         </HeroTableBody>
       </HeroTable>
     </HeroTableWrapper>

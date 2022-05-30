@@ -18,7 +18,11 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #f5bd30;
+  background: #F5BD30;
+}
+
+canvas {
+  touch-action: none;
 }
 
 

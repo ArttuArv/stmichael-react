@@ -8,15 +8,14 @@ export const Nav = styled.nav`
   //   to bottom, 
   //   rgba(18, 93, 13, 1) 0%, 
   //   rgba(18, 93, 13, 0.01) 100%);
-  //background: #123d0d;
   background: ${({ scrollNav }) => ( scrollNav 
-    ? '#1f1a17' 
+    ? '#06260F' 
     : 'transparent' )}; 
   border-bottom: ${({ scrollNav }) => ( scrollNav 
     ? '3px solid #D4A24E' 
     : 'none' )}; 
-  height: 60px;
-  margin-top: -60px; 
+  height: 80px;
+  margin-top: -80px; 
   justify-content: center;
   align-items: center;
   font-size: 1rem;
@@ -57,9 +56,24 @@ export const NavLogo = styled(LinkRouter)`    // Navbar Logo
 `;
 
 export const NavLogoImg = styled.img`       // Logo vasen yläkulma
-  height: 70%;
-  align-self: center;
-  align: left
+  display: ${({ scrollNav }) => ( scrollNav 
+    ? 'flex' 
+    : 'none' )}; 
+  width: 100%;
+  max-width: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 40px;
+  margin-left: 36px;  
+  cursor: pointer;
+  justify-self: flex-start;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+  }
+  
 `;
 
 export const MobileIcon = styled.div`       // Menu-ikoni oikea yläreuna
@@ -110,13 +124,13 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavItem = styled.li`
-  font-size: 2rem;
-  height: 80px;
+  font-size: 1.2rem;
+  height: 30px;
   margin-top: 20px;
 `;
 
 export const NavLinks = styled(LinkScroll)`
-  // display: flex;
+  display: flex;
   color: #F5BD30;
   align-items: center;
   text-decoration: none;
@@ -125,14 +139,12 @@ export const NavLinks = styled(LinkScroll)`
   cursor: pointer;  
 
   &:hover {
-    color: #CDC262;
-    font-size: 2.1rem;
     border-bottom: 3px solid #F5BD30;
     transition: 0.6 ease-in-out;    
   }
 
   &.active {
-    border-bottom: 8px solid #F5BD30;
+    border-bottom: 9px solid #F5BD30;
   }
 `;
 

@@ -69,20 +69,17 @@ export const HeroLogo = styled.img`
   margin-bottom: 48px;
 
 
-  // @media screen and (max-width: 768px) {
-  //   margin-bottom: 24px;
-  //   height: 150px;
-  // }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 24px;
+  }
 
-  // @media screen and (max-width: 480px) {
-  //   margin-bottom: 24px;
-  //   height: 100px;
-  // }
+  @media screen and (max-width: 480px) {
+    margin-bottom: 24px;
+  }
 
-  // @media screen and (max-width: 375px) {
-  //   margin-bottom: 24px;
-  //   height: 80px;
-  // }
+  @media screen and (max-width: 375px) {
+    margin-bottom: 24px;
+  }
 `;
 
 export const HeroH1 = styled.h1`

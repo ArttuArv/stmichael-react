@@ -78,6 +78,7 @@ export const BoxListH1 = styled.h1`
   font-size: 48px;
   text-align: center;
   padding: 10px;
+  background-color: #06260F;
 `;
 
 export const BoxListH2 = styled.h1`
@@ -86,6 +87,7 @@ export const BoxListH2 = styled.h1`
   font-size: 26px;
   text-align: center;
   margin-bottom: 40px;
+  background-color: #06260F;
 `;
 
 export const BoxListH3 = styled.h3`

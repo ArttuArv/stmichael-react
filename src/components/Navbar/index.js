@@ -77,7 +77,18 @@ const Navbar  = ({ toggle }) => {
                 offset = {-80}>
                 Viskit
               </NavLinks>
-            </NavItem>    
+            </NavItem> 
+            <NavItem>
+              <NavLinks 
+                to = 'whisky'  
+                smooth = {true} 
+                duration = {500} 
+                spy = {true}
+                exact = 'true' 
+                offset = {-80}>
+                Urheilu
+              </NavLinks>
+            </NavItem>       
           </NavMenu>
         </NavbarContainer>
       </Nav>

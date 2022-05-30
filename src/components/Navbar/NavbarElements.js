@@ -72,8 +72,7 @@ export const NavLogoImg = styled.img`       // Logo vasen yläkulma
   &:hover {
     transform: scale(1.1);
     transition: 0.2s ease-in-out;
-  }
-  
+  }  
 `;
 
 export const MobileIcon = styled.div`       // Menu-ikoni oikea yläreuna

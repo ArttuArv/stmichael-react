@@ -82,7 +82,8 @@ const Footer = () => {
             <SocialMediaWrapper>         
               <FooterLogo draggable = 'false' onClick = {onTop} src = {Logo} alt = {''} />   
               <SocialMediaP>Hallituskatu 13 - 17 90100 Oulu</SocialMediaP>
-              <SocialMediaP>puh: 08 311 7473</SocialMediaP>       
+              <SocialMediaP>puh: 08 311 7473</SocialMediaP>
+              <SocialMediaP>stmichael@stmichael.fi</SocialMediaP>        
               <SocialMediaIcons>
                 <SocialMediaIconLink href = '//www.facebook.com/irishpubstmichael' target = '_blank' aria-label = 'Facebook'>
                   <FaFacebook />

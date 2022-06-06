@@ -98,7 +98,7 @@ const Navbar  = ({ toggle }) => {
                 offset = {-80}>
                 Viskit
               </NavLinks>
-            </NavItem>     */}
+              </NavItem>*/}
           </NavMenu>
         </NavbarContainer>
       </Nav>

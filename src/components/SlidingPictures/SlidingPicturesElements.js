@@ -2,14 +2,16 @@ import styled from 'styled-components';
 import { animated } from 'react-spring';
 
 export const SPContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.3rem;
+  padding: 1.3rem;
   overflow-x: auto;
   width: 100%;
-  padding: 20px 0;
   background-color: #010606;
 
   ::-webkit-scrollbar {
-    height: 0.25rem;
+    height: 0.75rem;
   }
 
   ::-webkit-scrollbar-track {
@@ -22,16 +24,25 @@ export const SPContainer = styled.div`
   }
 `;
 
+export const SPCardContainer = styled.div`
+
+  &:hover {
+    transform: scale(0.99);
+    transition: all 0.1s ease-in-out;
+  }
+`;
+
 export const SPCard = styled(animated.div)`
   flex-shrink: 0;
-  width: 500px;
+  width: 100%;
+  min-width: 550px;
   height: 400px;
   border-radius: 10px;
-  margin-left: 10px;
+  border: 1px solid #F5BD30;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  cursor: pointer;
+  draggable: true; 
 `;
 
 export const SPCardWrapper = styled.div`
@@ -50,5 +61,6 @@ export const SPCardH1 = styled.h1`
   font-size: 48px;
   text-align: center;
   padding: 10px;
-
+  text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.8);
+  user-select: none;
 `;

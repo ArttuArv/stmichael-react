@@ -1,30 +1,43 @@
 import React from 'react'
-import { BLh1, BLTable, BLTableRow, BLTableData, BLTableBody, BLTableContainer, BLTableHeader, BLTableWrapper } from './BeerListElements'
+import { BLh1, BLh2, BLTable, BLTableRow, BLTableData, BLTableBody, BLTableContainer, BLTableHeader, BLTableWrapper } from './BeerListElements'
 
-const BeerList = ({ whisky }) => {
+const BeerList = ({ beer }) => {
 
   return (
-    <BLTableContainer>
-      <BLh1>Seasonal Products</BLh1>
-      <BLTableWrapper>
-        <BLTable>
-          <BLTableBody>
-            <BLTableRow>
-              <BLTableHeader>Nimi</BLTableHeader>
-              <BLTableHeader>Kuvaus</BLTableHeader>
-              <BLTableHeader>Hinta</BLTableHeader>
-            </BLTableRow>        
-            {whisky.map(whisky => (
-              <BLTableRow key={whisky.id}>
-                <BLTableData>{whisky.name}</BLTableData>
-                <BLTableData>{whisky.about}</BLTableData>
-                <BLTableData><b>{Math.floor(whisky.price)} € </b></BLTableData>
-              </BLTableRow>
-            ))}
-          </BLTableBody>
-        </BLTable>
-      </BLTableWrapper>
-    </BLTableContainer>
+    // <div style = {{ backgroundColor: '#06260F', height: '100%'}}>
+    <div>
+      <div style = {{ backgroundColor: '#06260F', paddingBottom: '80px'}}>             
+        {beer.map(genre => (
+          <BLTableContainer key = {genre.id}>
+            <BLh1 key = {genre.id}>
+              {genre.name}
+            </BLh1>
+            <BLTableWrapper>
+              <BLTable>
+                <BLTableBody>                  
+                  <BLTableRow>                
+                    <BLTableHeader>Nimi</BLTableHeader>
+                    <BLTableHeader>Tyyppi</BLTableHeader>
+                    <BLTableHeader>Maa</BLTableHeader>
+                    <BLTableHeader>Hinta / €</BLTableHeader>              
+                  </BLTableRow>
+                </BLTableBody>                  
+                <BLTableBody>
+                  {genre.products.map(beer => (
+                    <BLTableRow key = {beer.name}>
+                      <BLTableData style = {{ paddingRight: '10px' }}>{beer.name}</BLTableData>
+                      <BLTableData style = {{ paddingRight: '10px' }}>{beer.style}</BLTableData>
+                      <BLTableData style = {{ paddingRight: '10px' }}>{beer.country}</BLTableData>
+                      <BLTableData style = {{ paddingRight: '10px' }}>{beer.price}</BLTableData>
+                    </BLTableRow>
+                  ))}
+                </BLTableBody>
+              </BLTable>  
+            </BLTableWrapper>        
+          </BLTableContainer>         
+        ))}
+      </div>      
+    </div>
   )
 }
 

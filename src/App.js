@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import Home from './pages';
 import WhiskyPage from './pages/whisky';
+import BeerPage from './pages/beer';
+import SportsPage from './pages/sports';
+import StoryPage from './pages/story';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import './App.css'
@@ -11,13 +14,14 @@ import './App.css'
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [whisky, setWhisky] = useState([]);
+  const [beer, setBeer] = useState([]);
 
   const toggle = () => {   
     setIsOpen( open => !open );
   } 
 
   useEffect(() => {
-    axios.get('http://localhost:3001/whisky')
+    axios.get('http://localhost:3001/whisky2')
       .then(response => {
         setWhisky(response.data);
       })
@@ -26,14 +30,27 @@ const App = () => {
       });
   }, []);
 
+  useEffect(() => {
+    axios.get('http://localhost:3001/beer')
+      .then(response => {
+        setBeer(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <>
-      <Sidebar isOpen = {isOpen} toggle = {toggle} />
-      <Navbar toggle = {toggle} />
       <Router>
+        <Sidebar isOpen = {isOpen} toggle = {toggle} />
+        <Navbar toggle = {toggle} />
         <Routes>
           <Route path = '/' exact element = {<Home />} />
           <Route path = '/whisky' element = {<WhiskyPage whisky = {whisky} />} />
+          <Route path = '/beer' element = {<BeerPage beer = {beer} />} />
+          <Route path = '/sports' element = {<SportsPage />} />
+          <Route path = '/story' element = {<StoryPage />} />
         </Routes>
       </Router>
     </>

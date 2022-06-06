@@ -16,13 +16,16 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to = "news" onClick = {toggle} >
-            Ajankohtaista
+          <SidebarLink to = "/beer" onClick = {() => toggle} >
+            Hanatuotteet
           </SidebarLink>
-          <SidebarLink to = "products" onClick = {toggle} >
-            Tuotteita
+          <SidebarLink to = "/whisky" onClick = {() => toggle} >
+            Viskit
           </SidebarLink>
-          <SidebarLink to = "story" onClick = {toggle} >
+          <SidebarLink to = "/sports" onClick = {() => toggle} >
+            Urheilu
+          </SidebarLink>
+          <SidebarLink to = "/story" onClick = {() => toggle} >
             Tarina
           </SidebarLink>
         </SidebarMenu>

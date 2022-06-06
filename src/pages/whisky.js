@@ -1,16 +1,15 @@
 import React from 'react';
-import BoxList from '../components/BoxList';
+import WhiskyList from '../components/WhiskyList';
 import BeerList from '../components/BeerList';
 
 
-const Whisky = ( {whisky} ) => {  
+const Whisky = ( {whisky, beer} ) => {  
 
   window.scrollTo(0, 0);
 
   return (
     <>
-      <BoxList whisky={whisky} />
-      <BeerList whisky={whisky} />
+      <WhiskyList whisky = {whisky} />
     </>
   )
 }

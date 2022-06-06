@@ -17,12 +17,12 @@ import {
 const HeroSection = () => {
   
   return (
-    <HeroContainer>
+    <HeroContainer draggable = 'false'>
       <HeroBg>
         <VideoBg autoPlay loop muted src = {Video} type = 'video/mp4' />
       </HeroBg>
       <HeroContent>
-        <HeroLogo src = {Logo} alt = 'Logo' />
+        <HeroLogo draggable = 'false' src = {Logo} alt = 'Logo' />
         <HeroH1>The only piece of Ireland in Oulu</HeroH1>
         <HeroP>
           Hallituskatu 13 - 17 90100 Oulu

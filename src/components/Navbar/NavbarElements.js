@@ -4,15 +4,11 @@ import { Link as LinkScroll } from 'react-scroll';
 
 export const Nav = styled.nav`
   display: flex;
-  // background: linear-gradient(
-  //   to bottom, 
-  //   rgba(18, 93, 13, 1) 0%, 
-  //   rgba(18, 93, 13, 0.01) 100%);
   background: ${({ scrollNav }) => ( scrollNav 
     ? '#06260F' 
     : 'transparent' )}; 
   border-bottom: ${({ scrollNav }) => ( scrollNav 
-    ? '3px solid #D4A24E' 
+    ? '3px solid #F5BD30' 
     : 'none' )}; 
   height: 80px;
   margin-top: -80px; 
@@ -129,6 +125,25 @@ export const NavItem = styled.li`
   margin-top: 20px;
 `;
 
+export const NavLinkTo = styled(LinkRouter)`
+  display: flex;
+  color: #F5BD30;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;  
+
+  &:hover {
+    border-bottom: 3px solid #F5BD30;
+    transition: 0.1s ease-in-out;    
+  }
+
+  &.active {
+    border-bottom: 9px solid #F5BD30;
+  }
+`;
+
 export const NavLinks = styled(LinkScroll)`
   display: flex;
   color: #F5BD30;
@@ -140,7 +155,7 @@ export const NavLinks = styled(LinkScroll)`
 
   &:hover {
     border-bottom: 3px solid #F5BD30;
-    transition: 0.6 ease-in-out;    
+    transition: 0.1s ease-in-out;    
   }
 
   &.active {

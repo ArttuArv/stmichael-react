@@ -56,9 +56,10 @@ const Footer = () => {
             <FooterLinksWrapper>
               <FooterLinkItems>
                 <FooterLinkTitle>Sisältö</FooterLinkTitle>
-                <FooterLink to = 'whisky'>Hanatuotteet</FooterLink>
+                <FooterLink to = 'beer'>Hanatuotteet</FooterLink>
                 <FooterLink to = 'whisky'>Viskit</FooterLink>
-                <FooterLink to = 'whisky'>Urheilu</FooterLink>
+                <FooterLink to = 'sports'>Urheilu</FooterLink>
+                <FooterLink to = 'story'>Tarina</FooterLink>
               </FooterLinkItems>
             </FooterLinksWrapper>
           </FooterColumn>
@@ -79,7 +80,7 @@ const Footer = () => {
           </FooterColumn>
           <FooterColumn> 
             <SocialMediaWrapper>         
-              <FooterLogo onClick = {onTop} src = {Logo} alt = {''} />   
+              <FooterLogo draggable = 'false' onClick = {onTop} src = {Logo} alt = {''} />   
               <SocialMediaP>Hallituskatu 13 - 17 90100 Oulu</SocialMediaP>
               <SocialMediaP>puh: 08 311 7473</SocialMediaP>       
               <SocialMediaIcons>
@@ -99,49 +100,6 @@ const Footer = () => {
       </FooterWrapper>
     </FooterContainer>
   )
-
-  // return (
-  //   <FooterContainer>      
-  //     <FooterWrapper>
-  //       <FooterLogo onClick = {onTop} src = {Logo} alt = {''} />
-  //       <FooterLinksContainer>          
-  //         <FooterLinksWrapper>
-  //           <FooterLinkItems>
-  //             <FooterLinkTitle>Tekstiä</FooterLinkTitle>
-  //               <FooterLink to = '/signin'>Tekstiä</FooterLink>
-  //               <FooterLink to = '/signin'>Tekstiä</FooterLink>
-  //               <FooterLink to = '/signin'>Tekstiä</FooterLink>
-  //               <FooterLink to = '/signin'>Tekstiä</FooterLink>
-  //               <FooterLink to = '/signin'>Tekstiä</FooterLink>
-  //           </FooterLinkItems>
-  //           <FooterLinkItems>
-  //             <FooterLinkTitle>Tekstiä</FooterLinkTitle>
-  //               <FooterLink to = '/signin'>Tekstiä</FooterLink>
-  //               <FooterLink to = '/signin'>Tekstiä</FooterLink>
-  //               <FooterLink to = '/signin'>Tekstiä</FooterLink>
-  //               <FooterLink to = '/signin'>Tekstiä</FooterLink>
-  //               <FooterLink to = '/signin'>Tekstiä</FooterLink>
-  //           </FooterLinkItems>
-  //         </FooterLinksWrapper>
-  //       </FooterLinksContainer>
-  //       <SocialMedia>
-  //         <SocialMediaWrapper>           
-  //           <SocialMediaIcons>
-  //             <SocialMediaIconLink href = '//www.facebook.com/irishpubstmichael' target = '_blank' aria-label = 'Facebook'>
-  //               <FaFacebook />
-  //             </SocialMediaIconLink>
-  //             <SocialMediaIconLink href = '//www.instagram.com/st.michael_oulu' target = '_blank' aria-label = 'Facebook'>
-  //               <FaInstagram />
-  //             </SocialMediaIconLink>
-  //             <SocialMediaIconLink href = 'mailto:stmichael@stmichael.fi' target = '_blank' aria-label = 'Mail'>
-  //               <FaEnvelope />
-  //             </SocialMediaIconLink>
-  //           </SocialMediaIcons>
-  //         </SocialMediaWrapper>
-  //       </SocialMedia>
-  //     </FooterWrapper>
-  //   </FooterContainer>
-  // )
 }
 
 export default Footer

@@ -1,40 +1,38 @@
-import React from 'react';
-import { useSpring } from 'react-spring';
+import React, { useState, useRef, useEffect } from 'react';
+import { useSpring, useSprings } from 'react-spring';
 import { useScroll } from 'react-use-gesture';
-import { SPCard, SPContainer, SPCardWrapper, SPCardH1, } from './SlidingPicturesElements';
+import { SPCard, SPContainer, SPCardWrapper, SPCardH1, SPCardContainer, } from './SlidingPicturesElements';
 
 const images = [
   {
-    background: require('../../assets/images/kuva1.jpg'),
-    header: 'Otsikko1',
+    id: 1,
+    background: require('../../assets/images/kuva4.png'),
+    header: 'Hanatuotteet',
+    to: '/beer'
+  },
+  {
+    id: 2,
+    background: require('../../assets/images/kuva2.png'),
+    header: 'Viskit',
     to: '/whisky'
   },
   {
-    background: require('../../assets/images/kuva2.jpg'),
-    header: 'Otsikko2',
-    to: '/whisky'
+    id: 3,
+    background: require('../../assets/images/kuva3.png'),
+    header: 'Urheilu',
+    to: '/sports'
   },
   {
-    background: require('../../assets/images/kuva3.jpg'),
-    header: 'Otsikko3',
-    to: '/whisky'
+    id: 4,
+    background: require('../../assets/images/kuva4.png'),
+    header: 'Tarina',
+    to: '/story' 
   },
-  {
-    background: require('../../assets/images/kuva4.jpg'),
-    header: 'Otsikko4',
-    to: '/whisky' 
-  },
-  {
-    background: require('../../assets/images/beer.png'),
-    header: 'Otsikko5',
-    to: '/whisky'
-  },
-]
- 
+] 
 
 const SlidingPictures = () => {
   const [style, setStyle] = useSpring(() => ({
-      transform: "perspective(500px) rotateY(0deg)"
+    transform: "perspective(500px) rotateY(0deg)"
   }));
 
   const bind = useScroll(event => {
@@ -44,7 +42,7 @@ const SlidingPictures = () => {
     });
   });
 
-  const clamp = (value, clampAt = 15) => {
+  const clamp = (value, clampAt = 5) => {
     if (value > 0) {
       return value > clampAt ? clampAt : value;
     } else {
@@ -54,15 +52,17 @@ const SlidingPictures = () => {
 
   return (
     <>
-      <SPContainer { ...bind() }>
-        {images.map(src => (          
-          <SPCard key={src.header} style = {{ ...style, backgroundImage: `url(${src.background})` }}>
-            <a href={src.to} style = {{textDecoration: 'none'}}>
-              <SPCardWrapper>
-                <SPCardH1>{src.header}</SPCardH1>
-              </SPCardWrapper>
-            </a>
-          </SPCard>         
+      <SPContainer { ...bind() } >
+        {images.map(src => (
+          <SPCardContainer key={src.header}>          
+            <SPCard style = {{ ...style, backgroundImage: `url(${src.background})` }}>
+              <a href={src.to} style = {{textDecoration: 'none'}}>
+                <SPCardWrapper>
+                  <SPCardH1>{src.header}</SPCardH1>
+                </SPCardWrapper>
+              </a>
+            </SPCard> 
+          </SPCardContainer>        
         ))}
       </SPContainer>
     </>

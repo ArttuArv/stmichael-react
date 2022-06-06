@@ -9,10 +9,6 @@ export const SidebarContainer = styled.aside`
   width: 100%;
   height: 100%;
   background: #1f1a17;
-  // background: linear-gradient(
-  //   180deg,
-  //   rgba(31, 26, 23, 0.9) 75%,
-  //   rgba(31, 26, 23, 0.5) 100%);
   display: grid;
   align-items: center;
   top: 0;
@@ -59,7 +55,7 @@ export const SidebarMenu = styled.ul`           // Menun lista-asettelu
   }
 `;
 
-export const SidebarLink = styled(LinkScroll)`    // Linkkitekstit
+export const SidebarLink = styled(LinkRouter)`    // Linkkitekstit
   display: flex;
   align-items: center;
   justify-content: center;

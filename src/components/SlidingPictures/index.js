@@ -24,7 +24,7 @@ const images = [
   },
   {
     id: 4,
-    background: require('../../assets/images/kuva4.png'),
+    background: require('../../assets/images/st-michael-tunnelmakuva.jpg'),
     header: 'Tarina',
     to: '/story' 
   },

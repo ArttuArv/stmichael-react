@@ -19,6 +19,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: #F5BD30;
+  border-radius: 0.5rem;
 }
 
 canvas {

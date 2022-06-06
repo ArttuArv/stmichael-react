@@ -80,7 +80,13 @@ const SearchResult = ({ filteredList, length }) => {
         </div>   
     )
   }
-  else if (filteredList.lenght === length || filteredList.length === 0) {
+  else if (filteredList.length === 0) {
+    return (
+      <>
+      </>
+    )
+  }
+  else if (filteredList.lenght === length) {
     return (
       <>
         <WhiskyListP>Haulla ei löydy viskin viskiä.</WhiskyListP>

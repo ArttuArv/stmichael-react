@@ -31,10 +31,6 @@ const tableStyles = {
 }
 
 const tableWrapper = {
-  // display: 'flex',
-  // flexDirection: 'column',
-  // alignItems: 'center',
-  // justifyContent: 'center',
   width: '100%',
   padding: '0 10px',
   maxWidth: '1300px',
@@ -56,7 +52,9 @@ const buttonStyle = {
   transform: 'translateX(2px)'
 }
 
-const SearchResult = ({ filteredList, length }) => {  
+const SearchResult = ({ filteredList, length }) => { 
+  
+  console.log("SearchResult", filteredList);
   
   if (filteredList.length < 40 && filteredList.length > 0) {
     return (  
@@ -120,7 +118,7 @@ const WhiskyList = ({ whisky }) => {
   console.log("WhiskyList", whiskies);
 
   return (
-    <>
+    <div>
       <ImageContainer>
         <ImageWrapper>
           {images.map(src => (
@@ -161,34 +159,36 @@ const WhiskyList = ({ whisky }) => {
           </WhiskyListBox>
         </WhiskyListWrapper>
       </WhiskyListContainer>
-      <WhiskyListContainer>
-        <WhiskyListWrapper>
-          {whisky.map(area => (
-            <WhiskyListBox name = {area.name} key={area.id}>
-              <WhiskyListH1>{area.name}</WhiskyListH1>
-              <div style = {tableWrapper}>
-              <table style = {tableStyles}>
-                <tbody>
-                  <tr>
-                    <th style = {{textAlign: 'left'}}>Nimi</th>
-                    <th style = {{textAlign: 'left'}}>Maa</th>
-                    <th style = {{textAlign: 'right'}}>Hinta (€ / 4 cl)</th>
-                  </tr>      
-                  {area.whiskies.map(whisky => (          
-                    <tr style = {{borderBottom: '1px dashed black', marginBottom: '20px' }} key = {whisky.id}>
-                      <td style = {{ paddingTop: '10px', paddingBottom: '10px', paddingRight: '10px' }}>{whisky.name}</td>
-                      <td>{whisky.area}</td>
-                      <td style = {{ textAlign: 'right'}}>{whisky.price}</td>
-                    </tr>                          
-                  ))}
-                  </tbody>
-                </table> 
-              </div>
-            </WhiskyListBox>
-          ))}
-        </WhiskyListWrapper>
-      </WhiskyListContainer>
-    </>
+      <div style = {{ backgroundColor: '#06260F', paddingBottom: '80px'}}>
+        <WhiskyListContainer>
+          <WhiskyListWrapper>
+            {whisky.map(area => (
+              <WhiskyListBox name = {area.name} key={area.id}>
+                <WhiskyListH1>{area.name}</WhiskyListH1>
+                <div style = {tableWrapper}>
+                <table style = {tableStyles}>
+                  <tbody>
+                    <tr>
+                      <th style = {{textAlign: 'left'}}>Nimi</th>
+                      <th style = {{textAlign: 'left'}}>Alue</th>
+                      <th style = {{textAlign: 'right'}}>Hinta (€ / 4 cl)</th>
+                    </tr>      
+                    {area.whiskies.map(whisky => (          
+                      <tr style = {{borderBottom: '1px dashed black', marginBottom: '20px' }} key = {whisky.id}>
+                        <td style = {{ paddingTop: '10px', paddingBottom: '10px', paddingRight: '10px' }}>{whisky.name}</td>
+                        <td>{whisky.area}</td>
+                        <td style = {{ textAlign: 'right'}}>{whisky.price}</td>
+                      </tr>                          
+                    ))}
+                    </tbody>
+                  </table> 
+                </div>
+              </WhiskyListBox>
+            ))}
+          </WhiskyListWrapper>
+        </WhiskyListContainer>
+      </div>
+    </div>
   )
 }
 

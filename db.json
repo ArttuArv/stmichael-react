@@ -8,7 +8,7 @@
           "name": "Omnipollo Dank Dank 5,5 %",
           "style": "American Pale Ale",
           "country": "SE",
-          "price": "14,40"
+          "price": "14,40 / 0,33 l"
         },
         {
           "name": "Amager The Am-Azing Chanting Hobbits 7,0 %",
@@ -123,6 +123,60 @@
           "style": "Single Hop Pale Ale",
           "country": "Oulu, FI",
           "price": "11,00 / 7,80"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Regular Draughts",
+      "products": [
+        {
+          "name": "Guinness Draught",
+          "style": "Stout",
+          "country": "IR",
+          "price": "11,60 / 8,20"
+        },
+        {
+          "name": "Fuller's ESB",
+          "style": "Bitter",
+          "country": "UK",
+          "price": "10,70 / 7,60"
+        },
+        {
+          "name": "Pilsner Urquell",
+          "style": "Pilsner",
+          "country": "DE",
+          "price": "11,40 / 8,10"
+        },
+        {
+          "name": "Hoegaarden",
+          "style": "Vehenäolut",
+          "country": "BE",
+          "price": "11,40 / 8,10"
+        },
+        {
+          "name": "Karhu 4,6 %",
+          "style": "Lager",
+          "country": "FI",
+          "price": "11,00 / 7,80"
+        },
+        {
+          "name": "Sinebrychoff Long Drink 5,5 %",
+          "style": "Long Drink",
+          "country": "FI",
+          "price": "11,40 / 8,10"
+        },
+        {
+          "name": "Crowmoor Dry Apple Cider",
+          "style": "Cider",
+          "country": "FI",
+          "price": "11,40 / 8,10"
+        },
+        {
+          "name": "Westons Vintage Cider",
+          "style": "Cider",
+          "country": "UK",
+          "price": "11,40 / 8,10"
         }
       ]
     }

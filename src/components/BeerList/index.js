@@ -4,7 +4,6 @@ import { BLh1, BLh2, BLTable, BLTableRow, BLTableData, BLTableBody, BLTableConta
 const BeerList = ({ beer }) => {
 
   return (
-    // <div style = {{ backgroundColor: '#06260F', height: '100%'}}>
     <div>
       <div style = {{ backgroundColor: '#06260F', paddingBottom: '80px'}}>             
         {beer.map(genre => (
@@ -19,7 +18,7 @@ const BeerList = ({ beer }) => {
                     <BLTableHeader>Nimi</BLTableHeader>
                     <BLTableHeader>Tyyppi</BLTableHeader>
                     <BLTableHeader>Maa</BLTableHeader>
-                    <BLTableHeader>Hinta / €</BLTableHeader>              
+                    <BLTableHeader style = {{ textAlign: 'right' }}>Hinta / €</BLTableHeader>              
                   </BLTableRow>
                 </BLTableBody>                  
                 <BLTableBody>
@@ -28,7 +27,7 @@ const BeerList = ({ beer }) => {
                       <BLTableData style = {{ paddingRight: '10px' }}>{beer.name}</BLTableData>
                       <BLTableData style = {{ paddingRight: '10px' }}>{beer.style}</BLTableData>
                       <BLTableData style = {{ paddingRight: '10px' }}>{beer.country}</BLTableData>
-                      <BLTableData style = {{ paddingRight: '10px' }}>{beer.price}</BLTableData>
+                      <BLTableData style = {{ paddingRight: '10px', textAlign: 'right' }}>{beer.price}</BLTableData>
                     </BLTableRow>
                   ))}
                 </BLTableBody>

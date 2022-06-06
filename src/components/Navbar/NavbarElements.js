@@ -60,7 +60,7 @@ export const NavLogoImg = styled.img`       // Logo vasen yläkulma
   position: absolute;
   top: 0;
   left: 0;
-  margin: 40px;
+  margin: 42px;
   margin-left: 36px;  
   cursor: pointer;
   justify-self: flex-start;
@@ -68,7 +68,15 @@ export const NavLogoImg = styled.img`       // Logo vasen yläkulma
   &:hover {
     transform: scale(1.1);
     transition: 0.2s ease-in-out;
-  }  
+  } 
+
+  @media screen and (max-width: 769px) {
+    max-width: 50px;
+    margin-top: 20px;
+  
+  @media screen and (max-width: 400px) {
+    max-width: 40px;
+  }
 `;
 
 export const MobileIcon = styled.div`       // Menu-ikoni oikea yläreuna

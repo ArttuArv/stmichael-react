@@ -1,8 +1,9 @@
 import React from 'react'
+import SportsSection from '../components/SportsSection'
 
 const sports = () => {
   return (
-    <div>sports</div>
+    <SportsSection />
   )
 }
 

@@ -8,6 +8,7 @@ import SportsPage from './pages/sports';
 import StoryPage from './pages/story';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
+import TestPage from './pages/test';
 import './App.css'
 
 
@@ -51,6 +52,7 @@ const App = () => {
           <Route path = '/beer' element = {<BeerPage beer = {beer} />} />
           <Route path = '/sports' element = {<SportsPage />} />
           <Route path = '/story' element = {<StoryPage />} />
+          <Route path = '/testi' element = {<TestPage />} />
         </Routes>
       </Router>
     </>

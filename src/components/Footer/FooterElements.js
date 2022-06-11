@@ -68,7 +68,8 @@ export const FooterLinkItems = styled.div`    // LinkHeading
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  width: 160px;
+  width: 100%;
+  max-width: 160px;
   box-sizing: border-box;
 
   @media screen and (max-width: 1000px) {
@@ -110,9 +111,11 @@ export const SocialMedia = styled.section`
 
 export const SocialMediaWrapper = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   margin-top: -10px;
+  padding: 0 24px;
 `;
 
 export const SocialMediaP = styled.p`

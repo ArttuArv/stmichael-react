@@ -1,4 +1,5 @@
 import React from 'react'
+import openingHours from '../../assets/data/openinghours.js'
 import { 
   HeroTableWrapper,
   HeroTable,
@@ -7,20 +8,7 @@ import {
   HeroTableHead, 
 } from './HeroElements'
 
-const openingHours = [
-  {
-    day: 'Ma-To',
-    hours: '12 - 02',
-  },
-  {
-    day: 'Pe-La',
-    hours: '12 - 03',
-  },
-  {
-    day: 'Su',
-    hours: '12 - 02',
-  },
-]
+
 
 const OpeningHours = () => {
   return (

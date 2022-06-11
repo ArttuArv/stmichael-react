@@ -59,7 +59,7 @@ export const SidebarLink = styled(LinkRouter)`    // Linkkitekstit
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   text-decoration: none;
   list-style: none;
   transition: 0.2 ease-in-out;

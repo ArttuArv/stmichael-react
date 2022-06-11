@@ -45,7 +45,7 @@ const buttonStyle = {
   top: '10px',
   zIndex: '2',
   border: 'none',
-  borderRadius: '20px',    
+  borderRadius: '50%',    
   cursor: 'pointer',
   color: '#F5BD30',
   backgroundColor: '#06260F',
@@ -118,7 +118,7 @@ const WhiskyList = ({ whisky }) => {
   console.log("WhiskyList", whiskies);
 
   return (
-    <div>
+    <>
       <ImageContainer>
         <ImageWrapper>
           {images.map(src => (
@@ -126,6 +126,10 @@ const WhiskyList = ({ whisky }) => {
           ))}
         </ImageWrapper>
       </ImageContainer>
+      <WhiskyListContainer style = {{padding: '10px 5px'}}>
+        <WhiskyListH2>Viskilista elää viikottain. Pidätämme oikeudet muutoksiin.</WhiskyListH2>
+        <WhiskyListH2>Uutuusviskilista löytyy baaritiskiltä. Kysy lisää henkilökunnalta.</WhiskyListH2>
+      </WhiskyListContainer>
       <WhiskyListNav>
         <WhiskyListLinksContainer>
           {whisky.map(area => (
@@ -159,7 +163,7 @@ const WhiskyList = ({ whisky }) => {
           </WhiskyListBox>
         </WhiskyListWrapper>
       </WhiskyListContainer>
-      <div style = {{ backgroundColor: '#06260F', paddingBottom: '80px'}}>
+      <div style = {{ paddingBottom: '80px'}}>
         <WhiskyListContainer>
           <WhiskyListWrapper>
             {whisky.map(area => (
@@ -188,7 +192,7 @@ const WhiskyList = ({ whisky }) => {
           </WhiskyListWrapper>
         </WhiskyListContainer>
       </div>
-    </div>
+    </>
   )
 }
 

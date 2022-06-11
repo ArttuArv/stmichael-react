@@ -7,7 +7,8 @@ export const HeroContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  height: 850px;
+  min-height: 850px;
+  width: 100%;
   position: relative;
   z-index: 1;
   user-select: none;
@@ -28,10 +29,6 @@ export const HeroContainer = styled.div`
         rgba(0, 0, 0, 0.2) 0%, 
         transparent 100%);
     z-index: 2;
-  }
-
-  @media screen and (max-height: 714px) {
-    height: 720px;
   }
 `;
 
@@ -65,7 +62,12 @@ export const HeroContent = styled.div`
   align-items: center;
 
   @media screen and (max-width: 1920px) {
-    width: 800px;
+    max-width: 800px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0px 24px;
+    margin-top: -150px;
   }
 `;
 

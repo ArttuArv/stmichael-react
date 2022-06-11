@@ -38,7 +38,6 @@ export const Image = styled.img`
 
 export const WhiskyListContainer = styled.div`
   display: grid;
-  align-items: center;
   justify-content: center;
   padding: 0 10px;
   background-color: #06260F;
@@ -67,7 +66,8 @@ export const WhiskyListH1 = styled.h1`
   font-weight: 400;
   font-size: 48px;
   text-align: center;
-  padding: 5px;
+  margin-bottom: 40px;
+  margin-top: 20px;
 `;
 
 export const WhiskyListH2 = styled.h1`
@@ -114,7 +114,6 @@ export const WhiskyListNav = styled.nav`
 
 export const WhiskyListLinksContainer = styled.div`
   display: flex;
-  flex: 1;
   justify-content: center;
   width: 100%;
   max-width: 1100px;

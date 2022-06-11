@@ -14,43 +14,43 @@
           "name": "Amager The Am-Azing Chanting Hobbits 7,0 %",
           "style": "Double Dry Hopped Hazy IPA",
           "country": "DK",
-          "price": "12,20"
+          "price": "12,20 / 0,33 l"
         },
         {
           "name": "Magic Rock High Wire Grapefruit 5,0 %",
           "style": "Grapefruit Pale Ale",
           "country": "UK",
-          "price": "8,20"
+          "price": "8,20 / 0,33 l"
         },
         {
           "name": "Thornbridge Geminus 8,5 %",
           "style": "Imprerial Rye IPA",
           "country": "UK",
-          "price": "11,20"
+          "price": "11,20 / 0,33 l"
         },
         {
           "name": "Põhjala Vaguero Breakfast 12,0 %",
           "style": "Imperial Stout",
           "country": "EE",
-          "price": "20,00"
+          "price": "20,00 / 0,33 l"
         },
         {
           "name": "Helsinki Long Drink Gin & Yuzu 5,5 %",
           "style": "Long Drink",
           "country": "Helsinki, FI",
-          "price": "7,70"
+          "price": "7,70 / 0,33 l"
         },
         {
           "name": "Heart of Darkness Kurtz's Insane IPA 7,1 %",
           "style": "IPA",
           "country": "VN",
-          "price": "10,30"
+          "price": "10,30 / 0,33 l"
         },
         {
           "name": "Galway Bay Full Sail 5,8 %",
           "style": "IPA",
           "country": "IE",
-          "price": "10,80"
+          "price": "10,80 / 0,33 l"
         }
       ]
     },
@@ -175,6 +175,12 @@
         {
           "name": "Westons Vintage Cider",
           "style": "Cider",
+          "country": "UK",
+          "price": "11,40 / 8,10"
+        },
+        {
+          "name": "Belhaven Twisted Thistle IPA 5,3 %",
+          "style": "IPA",
           "country": "UK",
           "price": "11,40 / 8,10"
         }

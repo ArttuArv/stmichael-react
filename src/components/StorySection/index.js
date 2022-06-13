@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {text1, text2, text3} from '../../assets/text/story.js';
 import textFile from '../../assets/text/story.txt';
+import ImageCarousel from '../ImageCarousel/';
 import { StoryPageColumn2spanColumn, StoryPageColumn2SpanRow, StoryPageContainer, StoryPageGridWrapper, StoryPageImage, StoryPageImageWrapper, StoryPageTextWrapper } from './StorySectionElements.js';
 
 const cardStyle = {
@@ -70,11 +71,9 @@ const Story = () => {
           </StoryPageColumn2SpanRow>
             <StoryPageTextWrapper>
               <h1 style = {{ fontWeight: '400', fontSize: '3rem'}}>Tarinan otsikko</h1>
-              <p>{getText()}</p>
+              <p style = {{ textAlign: 'justify' }}>{getText()}</p>
             </StoryPageTextWrapper>
           <StoryPageColumn2spanColumn>
-            <StoryPageTextWrapper>3
-            </StoryPageTextWrapper>
           </StoryPageColumn2spanColumn>
         </StoryPageGridWrapper>
     </StoryPageContainer>

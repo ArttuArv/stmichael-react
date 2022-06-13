@@ -7,7 +7,6 @@ export const StoryPageContainer = styled.div`
   justify-content: center;
   padding: 100px 0;
   width: 100%;
-  height: 100%;
 `;
 
 export const StoryPageGridWrapper = styled.div`
@@ -27,26 +26,30 @@ export const StoryPageImageWrapper = styled.div`
   gap: 1rem;
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   width: 100%;
-  height: 100%;
  
-  @media (min-width: 600px) {
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  @media screen and (min-width: 600px) {
+    // grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
   }
 `;
 
 export const StoryPageColumn2SpanRow = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
-  height: 100%;
   grid-row: span 2;
+  grid-row-start: 3;
+
+  @media screen and (min-width: 600px) {
+    grid-row: span 1;
+  }
 `;
 
 export const StoryPageColumn2spanColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  // flex-direction: column;
+  // justify-content: center;
   width: 100%;
   height: 100%;
   grid-column: span 1;
@@ -59,7 +62,6 @@ export const StoryPageColumn2spanColumn = styled.div`
 
 export const StoryPageImage = styled.img`
   width: 100%;
-  height: 100%;
 `;
 
 export const StoryPageTextWrapper = styled.div`

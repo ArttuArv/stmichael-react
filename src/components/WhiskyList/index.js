@@ -118,14 +118,7 @@ const WhiskyList = ({ whisky }) => {
   console.log("WhiskyList", whiskies);
 
   return (
-    <>
-      <ImageContainer>
-        <ImageWrapper>
-          {images.map(src => (
-            <Image key={src} src={src} />
-          ))}
-        </ImageWrapper>
-      </ImageContainer>
+    <div style = {{ padding: '70px 0' }}>
       <WhiskyListContainer style = {{padding: '10px 5px'}}>
         <WhiskyListH2>Viskilista elää viikottain. Pidätämme oikeudet muutoksiin.</WhiskyListH2>
         <WhiskyListH2>Uutuusviskilista löytyy baaritiskiltä. Kysy lisää henkilökunnalta.</WhiskyListH2>
@@ -192,7 +185,7 @@ const WhiskyList = ({ whisky }) => {
           </WhiskyListWrapper>
         </WhiskyListContainer>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -22,6 +22,8 @@ export const SPContainer = styled.div`
     background: #F5BD30;
     border-radius: 10px;
   }
+
+  @media (min-width: 600px) {
 `;
 
 export const SPCardContainer = styled.div`
@@ -34,15 +36,17 @@ export const SPCardContainer = styled.div`
 
 export const SPCard = styled(animated.div)`
   flex-shrink: 0;
-  width: 100%;
   min-width: 550px;
+  width: 100%;
   height: 400px;
   border-radius: 10px;
   border: 1px solid #F5BD30;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  draggable: true; 
+
+  @media (min-width: 600px) {
+    min-width: 550px;
 `;
 
 export const SPCardWrapper = styled.div`

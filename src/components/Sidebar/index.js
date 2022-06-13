@@ -16,6 +16,9 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
+          <SidebarLink to = "/" onClick = {() => toggle} >
+            Etusivu
+          </SidebarLink>
           <SidebarLink to = "/beer" onClick = {() => toggle} >
             Hanatuotteet
           </SidebarLink>

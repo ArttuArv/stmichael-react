@@ -44,7 +44,6 @@ export const BLTableBody = styled.tbody`
 
 export const BLTableRow = styled.tr`
   border-bottom: 1px dashed #D4A24E;
-  // border-top: 1px solid #ddd;
   width: 100%;
 `;
 

@@ -51,7 +51,7 @@ export const SidebarMenu = styled.ul`           // Menun lista-asettelu
   text-align: center;
 
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(4, 100px);
+    grid-template-rows: repeat(5, 100px);
   }
 `;
 

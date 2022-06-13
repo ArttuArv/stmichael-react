@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {text1, text2, text3} from '../../assets/text/story.js';
 import textFile from '../../assets/text/story.txt';
-import { StoryPageColumn2spanColumn, StoryPageColumn2SpanRow, StoryPageContainer, StoryPageGridWrapper, StoryPageImage, StoryPageImageWrapper } from './StorySectionElements.js';
+import { StoryPageColumn2spanColumn, StoryPageColumn2SpanRow, StoryPageContainer, StoryPageGridWrapper, StoryPageImage, StoryPageImageWrapper, StoryPageTextWrapper } from './StorySectionElements.js';
 
 const cardStyle = {
   display: 'flex',
@@ -31,22 +31,7 @@ const cardStyle = {
   ],
 }
 
-const gridStyle = {
-  display: 'grid',
-  gap: '1rem',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-}
 
-const textWrapper = {
-  height: '100%',
-  width: '100%',
-  textAlign: 'justify',
-  hyphens: 'auto',
-  fontSize: '16px',
-  color: '#F5BD30',
-  fontWeight: '400',
-  padding: '10px',
-}
 
 const images = [
   require('../../assets/images/kuva1.png'),
@@ -68,40 +53,30 @@ const Story = () => {
   }
 
   return (
-    <StoryPageContainer>
-      <div style = {{ maxWidth: '100vh', margin: '0 20px' }}>
+    <StoryPageContainer>    
         <StoryPageGridWrapper>
-          <div style={cardStyle}>
-            <div style = {textWrapper}>
-              <h1>Otsikko1</h1>
-              <p>{text1}</p>
-              <div>1</div>
-            </div>
-          </div>
+          {/* <StoryPageTextWrapper>1
+            <div style = {{ backgroundColor: 'purple', width: '800px', height: '800px'}}>
+              text1
+            </div>            
+          </StoryPageTextWrapper> */}
           <StoryPageColumn2SpanRow>           
             {/* {images.map((image, index) => (<StoryPageImageWrapper key = {index} style = {{backgroundImage: `url(${image})`}}> */}
             <StoryPageImageWrapper>
               {images.map((image, index) => (              
-                <StoryPageImage style = {{ width: '100%', borderRadius: '20px' }} key = {index} src = {image} />                 
+                <StoryPageImage key = {index} src = {image} />                 
               ))}
             </StoryPageImageWrapper> 
           </StoryPageColumn2SpanRow>
-          <div style = {cardStyle}>
-            <div style = {textWrapper}>
-              <h1>Otsikko3</h1>
-              <p>{text3}</p>
-              <div>3</div>
-            </div>
-          </div>
-          <StoryPageColumn2spanColumn>
-            <div style = {textWrapper}>
-              <h2>Otsikko4</h2>
+            <StoryPageTextWrapper>
+              <h1 style = {{ fontWeight: '400', fontSize: '3rem'}}>Tarinan otsikko</h1>
               <p>{getText()}</p>
-              <div>4</div>
-            </div>
+            </StoryPageTextWrapper>
+          <StoryPageColumn2spanColumn>
+            <StoryPageTextWrapper>3
+            </StoryPageTextWrapper>
           </StoryPageColumn2spanColumn>
         </StoryPageGridWrapper>
-      </div>
     </StoryPageContainer>
   )
 }

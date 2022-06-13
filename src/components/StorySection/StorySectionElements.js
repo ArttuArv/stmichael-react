@@ -6,33 +6,32 @@ export const StoryPageContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  widht: 100%;
+  width: 100%;
   height: 100%;
 `;
 
 export const StoryPageGridWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 1rem;
   width: 100%;
+  padding: 1rem;
+  max-width: 1300px;
 
   @media (min-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
 `;
 
 export const StoryPageImageWrapper = styled.div`
   display: grid;
   gap: 1rem;
-  grid-auto-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   width: 100%;
   height: 100%;
-  // background-image: url(${props => props.image});
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-
-  @media (min-width: 1024px) {
-    grid-auto-columns: 1fr;
+ 
+  @media (min-width: 600px) {
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  }
 `;
 
 export const StoryPageColumn2SpanRow = styled.div`
@@ -50,16 +49,25 @@ export const StoryPageColumn2spanColumn = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  grid-column: span 2;
+  grid-column: span 1;
+  grid-row: span 2;
+
+  @media (min-width: 1024px) {
+    grid-column: span 2;
+    grid-row: span 1;
 `;
 
 export const StoryPageImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-bottom: 3px solid #D4A24E;
-  border-top: 3px solid #D4A24E;
-  border-collapse: collapse;
+`;
+
+export const StoryPageTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  color: #F5BD30;
 `;
 

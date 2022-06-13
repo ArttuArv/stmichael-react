@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useSpring, useSprings } from 'react-spring';
 import { useScroll } from 'react-use-gesture';
 import { SPCard, SPContainer, SPCardWrapper, SPCardH1, SPCardContainer, } from './SlidingPicturesElements';
+import { Link } from 'react-router-dom';
+import ImageSlider from '../ImageSlider';
 
 const images = [
   {
@@ -30,10 +32,21 @@ const images = [
   },
 ] 
 
+
 const SlidingPictures = () => {
   const [style, setStyle] = useSpring(() => ({
     transform: "perspective(500px) rotateY(0deg)"
   }));
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 600);
+  
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 600);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', updateMedia);
+    return () => window.removeEventListener('resize', updateMedia); 
+  });
 
   const bind = useScroll(event => {
     setStyle.start({transform: `perspective(500px) rotateY(${event.scrolling 
@@ -50,21 +63,27 @@ const SlidingPictures = () => {
     }
   };
 
+
   return (
     <>
-      <SPContainer { ...bind() } >
-        {images.map(src => (
-          <SPCardContainer key={src.header}>          
-            <SPCard style = {{ ...style, backgroundImage: `url(${src.background})` }}>
-              <a href={src.to} style = {{textDecoration: 'none'}}>
-                <SPCardWrapper>
-                  <SPCardH1>{src.header}</SPCardH1>
-                </SPCardWrapper>
-              </a>
-            </SPCard> 
-          </SPCardContainer>        
-        ))}
-      </SPContainer>
+      {isDesktop ? ( 
+        <SPContainer { ...bind() } >
+          {images.map(src => (
+            <SPCardContainer key={src.header}>          
+              <SPCard style = {{ ...style, backgroundImage: `url(${src.background})` }}>
+                <Link to = {src.to} style = {{textDecoration: 'none'}}>
+                  <SPCardWrapper>
+                    <SPCardH1>{src.header}</SPCardH1>
+                  </SPCardWrapper>
+                </Link>
+              </SPCard> 
+            </SPCardContainer>        
+          ))}
+        </SPContainer> )
+        : (
+          <ImageSlider images = {images} />          
+        )
+      }
     </>
   );
 }
